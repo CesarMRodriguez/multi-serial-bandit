@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 public class LtExpression extends ConditionExpression {
 
+    private static final long serialVersionUID = 1L;
+
     private Statement value1;
 
     private Statement value2;

@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 public class StringStatement extends Statement {
 
+    private static final long serialVersionUID = 1L;
+
     private String value;
 
     public StringStatement(String value) {

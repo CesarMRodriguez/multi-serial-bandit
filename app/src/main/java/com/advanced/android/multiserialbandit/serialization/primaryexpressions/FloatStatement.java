@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 public class FloatStatement extends Statement {
 
+    private static final long serialVersionUID = 1L;
+
     private Float value;
 
     public FloatStatement(Float value) {

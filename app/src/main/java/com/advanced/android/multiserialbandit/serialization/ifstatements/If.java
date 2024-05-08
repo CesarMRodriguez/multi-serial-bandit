@@ -7,6 +7,8 @@ import java.io.Serializable;
 
 public class If extends Statement {
 
+    private static final long serialVersionUID = 1L;
+
     private ConditionExpression conditionExpression;
 
     private Block trueBlock;

@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 public class DoubleStatement extends Statement {
 
+    private static final long serialVersionUID = 1L;
+
     private Double value;
 
     public DoubleStatement(Double value) {

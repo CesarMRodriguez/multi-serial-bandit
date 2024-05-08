@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 public class GtExpression extends ConditionExpression {
 
+    private static final long serialVersionUID = 1L;
 
     private Statement value1;
 

@@ -6,5 +6,6 @@ import java.io.Serializable;
 
 public class DeclarationStatement extends Statement implements Serializable {
 
+    private static final long serialVersionUID = 1L;
 
 }

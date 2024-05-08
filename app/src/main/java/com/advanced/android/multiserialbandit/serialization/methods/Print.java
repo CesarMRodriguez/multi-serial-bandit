@@ -8,6 +8,8 @@ import java.io.Serializable;
 
 public class Print extends Method {
 
+    private static final long serialVersionUID = 1L;
+
     private String tag;
 
     private Statement statement;

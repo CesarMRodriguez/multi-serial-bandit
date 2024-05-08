@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class LogicalOrExpression extends ConditionExpression {
 
+    private static final long serialVersionUID = 1L;
+
     private ConditionExpression conditionExpression1;
 
     private ConditionExpression conditionExpression2;

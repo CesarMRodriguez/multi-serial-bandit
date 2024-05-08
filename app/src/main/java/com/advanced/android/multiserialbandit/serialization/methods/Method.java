@@ -6,5 +6,7 @@ import java.util.LinkedList;
 
 public class Method extends Statement {
 
+    private static final long serialVersionUID = 1L;
+
     private LinkedList<Statement> parameters;
 }

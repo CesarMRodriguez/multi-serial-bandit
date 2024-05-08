@@ -6,6 +6,9 @@ import java.io.Serializable;
 
 public class DeleteVariableStatement extends DeclarationStatement implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
+
     private String name;
 
     public DeleteVariableStatement(String name) {

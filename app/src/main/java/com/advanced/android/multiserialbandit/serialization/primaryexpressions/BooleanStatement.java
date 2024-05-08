@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 public class BooleanStatement extends Statement {
 
+    private static final long serialVersionUID = 1L;
+
     private Boolean value;
 
     public BooleanStatement(Boolean value) {

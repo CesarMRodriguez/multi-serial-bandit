@@ -8,6 +8,8 @@ import java.io.Serializable;
 
 public class For extends Statement {
 
+    private static final long serialVersionUID = 1L;
+
     private Statement forInit;
 
     private ConditionExpression forValidation;

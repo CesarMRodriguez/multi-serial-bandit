@@ -8,6 +8,8 @@ import java.io.Serializable;
 
 public class While extends Statement {
 
+    private static final long serialVersionUID = 1L;
+
     private ConditionExpression condition;
 
     private Block block;

@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 public class LongStatement extends Statement {
 
+    private static final long serialVersionUID = 1L;
+
     private Long value;
 
     public LongStatement(Long value) {

@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 public class Sub extends Statement {
 
+    private static final long serialVersionUID = 1L;
+
     private Statement operator1;
     private Statement operator2;
 
