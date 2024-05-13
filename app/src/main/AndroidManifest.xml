@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Multiserialbandit"
         tools:targetApi="31">
         <activity
+            android:name=".EmulatorActivity"
+            android:exported="true"
+            android:label="@string/title_activity_emulator"
+            android:theme="@style/Theme.Multiserialbandit" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

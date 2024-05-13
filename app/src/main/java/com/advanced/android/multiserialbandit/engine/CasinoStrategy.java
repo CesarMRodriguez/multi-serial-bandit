@@ -1,5 +1,7 @@
 package com.advanced.android.multiserialbandit.engine;
 
+import android.util.Log;
+
 import com.advanced.android.multiserialbandit.serialization.Block;
 import com.advanced.android.multiserialbandit.serialization.declarations.SetStatementVariableStatement;
 import com.advanced.android.multiserialbandit.serialization.declarations.SetVariableStatement;
@@ -16,8 +18,9 @@ import kotlin.random.Random;
 
 public class CasinoStrategy {
 
-    public static int getMachineToRun() {
+    private static Block intentBlock = null;
 
+    private static void runInternalExample() {
         /*
         if (Casino.getCasinoRun().isFirstTime()) {
             return 1;
@@ -34,10 +37,6 @@ public class CasinoStrategy {
             }
         }*/
 
-        if (Casino.getCasinoRun().isFirstTime()) {
-            Environment.getEnvironment().cleanList();
-        }
-
         Block wasSuccessFullTrueBlock = new Block().addStatement(new SetStatementVariableStatement("ReturnValue",new GetLastShotMachineNumber()));
 
         Block equalMachineTrueBlock = new Block().addStatement(new SetVariableStatement("ReturnValue",0));
@@ -51,8 +50,33 @@ public class CasinoStrategy {
         Block block = new Block().addStatement(new If(new PrimaryExpression(new IsFirstTime()), isFirstTrueBlock, isFirstFalseBlock));
 
         block.run();
+    }
+
+    public static int getMachineToRun() {
+
+        if (Casino.getCasinoRun().isFirstTime()) {
+            Environment.getEnvironment().cleanList();
+        }
+
+        if (intentBlock != null) {
+            intentBlock.run();
+        } else {
+            runInternalExample();
+        }
 
         Environment environment = Environment.getEnvironment();
         return (Integer) environment.getVariableList().getVariable("ReturnValue");
+    }
+
+    public static void setIntentBlock(Block block) {
+        intentBlock = block;
+    }
+
+    public static void runIntentBlock() {
+        if (intentBlock != null) {
+            intentBlock.run();
+        } else {
+            Log.i("CASINO_STRAT","No intent block code was added");
+        }
     }
 }

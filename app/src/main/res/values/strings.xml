@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">multiserialbandit</string>
+    <string name="title_activity_emulator">EmulatorActivity</string>
 </resources>
